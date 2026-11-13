@@ -4,60 +4,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Getúlio Brabo | Literatura de Cordel</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
+  background: #f3e6c9;
+  color: #382416;
   font-family: Georgia, serif;
-  background: #f5ead2;
-  color: #332313;
-  text-align: center;
+  line-height: 1.7;
 }
 
 header {
-  background: #552b18;
-  color: #fff1d2;
-  padding: 45px 20px;
+  background: #422316;
+  color: #f8e8c6;
+  text-align: center;
+  padding: 48px 20px;
+  border-bottom: 7px solid #a66b32;
 }
 
-header h1 { font-size: 38px; margin: 0; }
-
-main {
-  max-width: 850px;
-  margin: 35px auto;
-  padding: 20px;
+header .subtitulo {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 12px;
 }
 
-h2 { color: #71391d; }
+header h1 {
+  font-size: clamp(36px, 7vw, 65px);
+  line-height: 1.1;
+}
 
-p { line-height: 1.8; }
+header p {
+  margin-top: 12px;
+  font-style: italic;
+}
+
+nav {
+  background: #754326;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff1d5;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover { color: #e6bd79; }
+
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background:
+    linear-gradient(rgba(243,230,201,.91), rgba(243,230,201,.91)),
+    repeating-linear-gradient(45deg, #c6a779 0px, #c6a779 2px, transparent 2px, transparent 8px);
+}
+
+.hero h2 {
+  font-size: clamp(27px, 5vw, 42px);
+  color: #542b18;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+}
+
+.linha {
+  width: 100px;
+  height: 4px;
+  background: #a66b32;
+  margin: 20px auto;
+}
+
+section {
+  max-width: 950px;
+  margin: auto;
+  padding: 55px 22px;
+  text-align: center;
+}
+
+section h2 {
+  color: #713d20;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+section p {
+  max-width: 720px;
+  margin: 12px auto;
+}
+
+.capa {
+  background: #fff9ec;
+  border: 2px solid #b58b55;
+  border-radius: 10px;
+  padding: 18px;
+  max-width: 650px;
+  margin: 25px auto;
+  box-shadow: 0 8px 22px #54351c25;
+}
+
+.capa iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+  background: #e9dcc0;
+}
 
 .botoes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin: 30px 0;
+  gap: 14px;
+  margin-top: 25px;
 }
 
-a {
+.botao {
   display: inline-block;
-  background: #71391d;
+  padding: 13px 23px;
+  background: #67371f;
   color: white;
-  padding: 14px 22px;
-  border-radius: 7px;
+  border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+  transition: .2s;
 }
 
-a:hover { background: #a15a2e; }
+.botao:hover {
+  background: #9a5d2d;
+  transform: translateY(-2px);
+}
+
+.botao.secundario {
+  background: #a4773e;
+}
+
+.obra {
+  background: #e8d6b2;
+  border-top: 1px solid #c5a577;
+  border-bottom: 1px solid #c5a577;
+}
+
+.cartao {
+  background: #fff9ec;
+  border: 1px solid #c6a779;
+  border-radius: 8px;
+  padding: 28px;
+  max-width: 650px;
+  margin: 25px auto;
+}
 
 footer {
-  background: #552b18;
-  color: white;
-  padding: 20px;
+  background: #422316;
+  color: #f8e8c6;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 5px;
+}
+
+@media(max-width: 600px) {
+  nav { gap: 15px; }
+  .capa iframe { height: 400px; }
+  section { padding: 40px 18px; }
 }
 </style>
 </head>
@@ -65,38 +192,94 @@ footer {
 <body>
 
 <header>
+  <div class="subtitulo">Tradição • Cultura • Poesia</div>
   <h1>Getúlio Brabo</h1>
-  <p>Uma história contada em Literatura de Cordel</p>
+  <p>Uma obra em Literatura de Cordel</p>
 </header>
 
-<main>
-  <h2>Bem-vindo à nossa obra!</h2>
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre a obra</a>
+  <a href="#capa">A capa</a>
+  <a href="#leitura">Ler cordel</a>
+</nav>
 
+<div class="hero" id="inicio">
+  <h2>Bem-vindo ao universo do cordel!</h2>
+  <div class="linha"></div>
   <p>
-    Conheça a obra Getúlio Brabo em Literatura de Cordel,
-    uma produção que valoriza a cultura popular,
-    a poesia e a tradição nordestina.
+    Um espaço dedicado à apresentação da obra
+    Getúlio Brabo em Literatura de Cordel,
+    valorizando a poesia e a tradição da cultura popular.
   </p>
+</div>
 
-  <h2>Conheça o cordel</h2>
-
+<section id="sobre">
+  <h2>Sobre a obra</h2>
+  <div class="linha"></div>
   <p>
-    Acesse a capa e leia a obra completa em PDF.
+    Getúlio Brabo em Literatura de Cordel é uma obra
+    apresentada neste espaço para que leitores possam
+    conhecer, acessar e apreciar sua produção literária.
   </p>
+  <p>
+    Explore a capa, conheça a publicação e tenha acesso
+    ao cordel completo em formato digital.
+  </p>
+</section>
 
-  <div class="botoes">
-    <a href="CAPA%20CORDEL%20GETULIO.pdf" target="_blank">
-      Ver capa
-    </a>
+<section id="capa" class="obra">
+  <h2>Conheça a capa</h2>
+  <div class="linha"></div>
+  <p>Confira a capa original da publicação.</p>
 
-    <a href="CORDEL%20GETULIO%20BRABO%20S.pdf" target="_blank">
-      Ler cordel completo
-    </a>
+  <div class="capa">
+    <iframe
+      src="CAPA%20CORDEL%20GETULIO.pdf#toolbar=0"
+      title="Capa do cordel Getúlio Brabo">
+    </iframe>
+    <div class="botoes">
+      <a class="botao secundario"
+         href="CAPA%20CORDEL%20GETULIO.pdf"
+         target="_blank">
+        Abrir capa
+      </a>
+    </div>
   </div>
-</main>
+</section>
+
+<section id="leitura">
+  <h2>Acesse a obra completa</h2>
+  <div class="linha"></div>
+
+  <div class="cartao">
+    <h3>Getúlio Brabo em Literatura de Cordel</h3>
+    <p>
+      Acesse o documento completo e faça a leitura
+      da obra diretamente no seu dispositivo.
+    </p>
+
+    <div class="botoes">
+      <a class="botao"
+         href="CORDEL%20GETULIO%20BRABO%20S.pdf"
+         target="_blank">
+        Ler cordel completo
+      </a>
+
+      <a class="botao secundario"
+         href="CORDEL%20GETULIO%20BRABO%20S.pdf"
+         download>
+        Baixar PDF
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <p>Getúlio Brabo — Literatura de Cordel</p>
+  <h3>Getúlio Brabo</h3>
+  <p>Literatura de Cordel</p>
+  <p>Um espaço de valorização da cultura e da poesia popular.</p>
+  <p>© 2026 — Todos os direitos reservados.</p>
 </footer>
 
 </body>
